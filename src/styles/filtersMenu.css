@@ -1,0 +1,98 @@
+.discContainer {
+	background-color: #fafafa;
+	border-bottom: solid;
+	border-color: black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-width: 1px;
+}
+
+.discHeaderContainer {
+	position: relative;
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+	grid-column-start: 1;
+	grid-row-start: 1;
+}
+
+.discButtonContainer {
+	display: flex;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	max-width: 80rem;
+	border-left-width: 1px;
+	border-color: #1261ff;
+
+	@media (min-width: 640px) {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	@media (min-width: 1024px) {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+.disclosure {
+	display: grid;
+	position: relative;
+	z-index: 10;
+	align-items: center;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-color: #e5e7eb;
+}
+
+.discButton {
+	display: flex;
+	color: #374151;
+	align-items: center;
+	border: none;
+	background-color: transparent;
+	font-size: x-large;
+	width: 100%;
+}
+.transitionOpen {
+	transition-property: background-color, border-color, color, fill, stroke,
+		opacity, box-shadow, transform;
+	transition-duration: 200ms;
+	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.transitionOpenFrom {
+	--transform-scale-x: 0.95;
+	--transform-scale-y: 0.95;
+	opacity: 0;
+}
+
+.transitionOpenTo {
+	--transform-scale-x: 1;
+	--transform-scale-y: 1;
+	opacity: 1;
+}
+.transitionClose {
+	transition-property: background-color, border-color, color, fill, stroke,
+		opacity, box-shadow, transform;
+	transition-duration: 100ms;
+	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+.transitionCloseFrom {
+	--transform-scale-x: 1;
+	--transform-scale-y: 1;
+	opacity: 1;
+}
+.transitionCloseTo {
+	--transform-scale-x: 0.95;
+	--transform-scale-y: 0.95;
+	opacity: 0;
+}
+
+.panel {
+	padding-top: 1.25rem;
+	padding-bottom: 2.5rem;
+	border-top-width: 1px;
+	border-color: #e5e7eb;
+}
